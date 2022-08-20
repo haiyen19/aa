@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StudentService.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StudentService.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfInsertStudentScoreModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InsertStudentScoreModel" nillable="true" type="tns:InsertStudentScoreModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInsertStudentScoreModel" nillable="true" type="tns:ArrayOfInsertStudentScoreModel" />
+  <xs:complexType name="InsertStudentScoreModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberStudy" type="xs:int" />
+      <xs:element minOccurs="0" name="Score1" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score2" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score3" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InsertStudentScoreModel" nillable="true" type="tns:InsertStudentScoreModel" />
+  <xs:complexType name="ArrayOfTopStudentVm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TopStudentVm" nillable="true" type="tns:TopStudentVm" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTopStudentVm" nillable="true" type="tns:ArrayOfTopStudentVm" />
+  <xs:complexType name="TopStudentVm">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllCredits" type="xs:int" />
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediumScore10" type="xs:double" />
+      <xs:element minOccurs="0" name="MediumScore4" type="xs:double" />
+      <xs:element minOccurs="0" name="ReachCredits" type="xs:int" />
+      <xs:element minOccurs="0" name="StudentId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TopStudentVm" nillable="true" type="tns:TopStudentVm" />
+  <xs:complexType name="ArrayOfScoreStudentViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScoreStudentViewModel" nillable="true" type="tns:ScoreStudentViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScoreStudentViewModel" nillable="true" type="tns:ArrayOfScoreStudentViewModel" />
+  <xs:complexType name="ScoreStudentViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Evaluate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberStudy" type="xs:int" />
+      <xs:element minOccurs="0" name="Score1" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score2" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score3" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Scoreword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SummaryScore" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="SummaryScore4" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ScoreStudentViewModel" nillable="true" type="tns:ScoreStudentViewModel" />
+  <xs:complexType name="ArrayOfStudentInsertScoreByLecturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudentInsertScoreByLecturer" nillable="true" type="tns:StudentInsertScoreByLecturer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudentInsertScoreByLecturer" nillable="true" type="tns:ArrayOfStudentInsertScoreByLecturer" />
+  <xs:complexType name="StudentInsertScoreByLecturer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberStudy" type="xs:int" />
+      <xs:element minOccurs="0" name="Score1" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score2" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score3" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="StudentId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudentInsertScoreByLecturer" nillable="true" type="tns:StudentInsertScoreByLecturer" />
+  <xs:complexType name="ArrayOfScoreViewModelByStudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScoreViewModelByStudent" nillable="true" type="tns:ScoreViewModelByStudent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScoreViewModelByStudent" nillable="true" type="tns:ArrayOfScoreViewModelByStudent" />
+  <xs:complexType name="ScoreViewModelByStudent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Credits" type="xs:int" />
+      <xs:element minOccurs="0" name="Evaluate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSubject" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberStudy" type="xs:int" />
+      <xs:element minOccurs="0" name="Score1" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score2" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Score3" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Scoreword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SummaryScore" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="SummaryScore4" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ScoreViewModelByStudent" nillable="true" type="tns:ScoreViewModelByStudent" />
+</xs:schema>

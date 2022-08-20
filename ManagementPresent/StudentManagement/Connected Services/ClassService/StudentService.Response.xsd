@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StudentService.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StudentService.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Model" />
+  <xs:complexType name="ResponseServiceOfint">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfint" nillable="true" type="tns:ResponseServiceOfint" />
+  <xs:complexType name="ResponseServiceOfArrayOfClassViewModelDZYKyK_SB">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfClassViewModel" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/StudentService.Model" minOccurs="0" name="Data" nillable="true" type="q1:ArrayOfClassViewModel" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfClassViewModelDZYKyK_SB" nillable="true" type="tns:ResponseServiceOfArrayOfClassViewModelDZYKyK_SB" />
+  <xs:complexType name="ResponseServiceOfClassDZYKyK_SB">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Class" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/StudentService.Model" minOccurs="0" name="Data" nillable="true" type="q2:Class" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfClassDZYKyK_SB" nillable="true" type="tns:ResponseServiceOfClassDZYKyK_SB" />
+  <xs:complexType name="ResponseServiceOfArrayOfIdAndNameModelDZYKyK_SB">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseServiceOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfIdAndNameModel" Namespace="http://schemas.datacontract.org/2004/07/StudentService.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/StudentService.Model" minOccurs="0" name="Data" nillable="true" type="q3:ArrayOfIdAndNameModel" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseServiceOfArrayOfIdAndNameModelDZYKyK_SB" nillable="true" type="tns:ResponseServiceOfArrayOfIdAndNameModelDZYKyK_SB" />
+</xs:schema>

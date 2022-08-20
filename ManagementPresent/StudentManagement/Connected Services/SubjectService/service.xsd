@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Request" />
+  <xs:element name="Save">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/StudentService.Model" minOccurs="0" name="request" nillable="true" type="q1:Subject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SaveResult" nillable="true" type="q2:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Subjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q3:FacutylePaginationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SubjectsResult" nillable="true" type="q4:ResponseServiceOfArrayOfSubjectDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Subject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SubjectResult" nillable="true" type="q5:ResponseServiceOfSubjectDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="DeleteResult" nillable="true" type="q6:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubjectByFacultyAndSemester">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q7:FacultyAndSemesterRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubjectByFacultyAndSemesterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SubjectByFacultyAndSemesterResult" nillable="true" type="q8:ResponseServiceOfArrayOfIdAndNameModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubjectHaveClassSubjectOpen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StudentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubjectHaveClassSubjectOpenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SubjectHaveClassSubjectOpenResult" nillable="true" type="q9:ResponseServiceOfArrayOfIdAndNameModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

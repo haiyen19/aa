@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5fe5782f-7be5-4f00-a6d9-1b0717ffab71" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fe13d69c-3b14-4ca2-af22-9023466b01c6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0064f224-598f-4016-8ada-a983c8db2010" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="75e8e3b1-5180-4217-a687-163f4a150f1f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" />
+    <MetadataFile FileName="StudentService.Request.xsd" MetadataType="Schema" ID="334e7896-ba3b-411f-ac6e-c2138b58c785" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" />
+    <MetadataFile FileName="StudentService.Response.xsd" MetadataType="Schema" ID="4691d7e7-ba25-491d-ab08-e15a98be7ffd" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" />
+    <MetadataFile FileName="StudentService.Model.xsd" MetadataType="Schema" ID="cafdbcad-127d-4004-93c3-e23fe5cd01b4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/UserService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Request" />
+  <xs:element name="OpenClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FacultyId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="OpenClassResult" nillable="true" type="q1:ResponseServiceOfArrayOfOpenClassModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOpenClass">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q2:OpenClassRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOpenClassResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SaveOpenClassResult" nillable="true" type="q3:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="DeleteResult" nillable="true" type="q4:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="GetByIdResult" nillable="true" type="q5:ResponseServiceOfOpenClassRequestUczvJczV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenClassForLecture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LectureId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenClassForLectureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="OpenClassForLectureResult" nillable="true" type="q6:ResponseServiceOfArrayOfOpenClassModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenClassForRegistStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubjectId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OpenClassForRegistStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="OpenClassForRegistStudentResult" nillable="true" type="q7:ResponseServiceOfArrayOfOpenClassModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentRegist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q8:RegistOpenClassRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentRegistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="StudentRegistResult" nillable="true" type="q9:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResultRegistClassSubjectByStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="studentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResultRegistClassSubjectByStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="ResultRegistClassSubjectByStudentResult" nillable="true" type="q10:ResponseServiceOfArrayOfOpenClassModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentCancelRegist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="IdStudent" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentCancelRegistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="StudentCancelRegistResult" nillable="true" type="q11:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC94E02A-4929-4043-9C7B-27E8FB5D13E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentManagement</RootNamespace>
+    <AssemblyName>StudentManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.1\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\ClassService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CourseService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\FacutlyService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\OpenClassService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ScoreService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceStudent\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SubjectService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\UserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Extendsion\AutoScreen.cs" />
+    <Compile Include="Extendsion\Extendsion.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmClassBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmClassBase.Designer.cs">
+      <DependentUpon>FrmClassBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmClassSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmClassSubject.Designer.cs">
+      <DependentUpon>FrmClassSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmCourse.Designer.cs">
+      <DependentUpon>FrmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmFacutly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmFacutly.Designer.cs">
+      <DependentUpon>FrmFacutly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmLecturerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmLecturerManagement.Designer.cs">
+      <DependentUpon>FrmLecturerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmProfieLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmProfieLecturer.Designer.cs">
+      <DependentUpon>FrmProfieLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmProfileStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmProfileStudent.Designer.cs">
+      <DependentUpon>FrmProfileStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmScoreByAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmScoreByAdmin.Designer.cs">
+      <DependentUpon>FrmScoreByAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmScoreByStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmScoreByStudent.Designer.cs">
+      <DependentUpon>FrmScoreByStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmScoreForLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmScoreForLecturer.Designer.cs">
+      <DependentUpon>FrmScoreForLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmStudentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmStudentManagement.Designer.cs">
+      <DependentUpon>FrmStudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmStudentRegistSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmStudentRegistSubject.Designer.cs">
+      <DependentUpon>FrmStudentRegistSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmSubject.Designer.cs">
+      <DependentUpon>FrmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\CurrentUser.cs" />
+    <Compile Include="Globals\TypeUser.cs" />
+    <Compile Include="Layout\ThemeColor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmClassBase.resx">
+      <DependentUpon>FrmClassBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmClassSubject.resx">
+      <DependentUpon>FrmClassSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmCourse.resx">
+      <DependentUpon>FrmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmFacutly.resx">
+      <DependentUpon>FrmFacutly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmLecturerManagement.resx">
+      <DependentUpon>FrmLecturerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmProfieLecturer.resx">
+      <DependentUpon>FrmProfieLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmProfileStudent.resx">
+      <DependentUpon>FrmProfileStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmScoreByAdmin.resx">
+      <DependentUpon>FrmScoreByAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmScoreByStudent.resx">
+      <DependentUpon>FrmScoreByStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmScoreForLecturer.resx">
+      <DependentUpon>FrmScoreForLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmStudentManagement.resx">
+      <DependentUpon>FrmStudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmStudentRegistSubject.resx">
+      <DependentUpon>FrmStudentRegistSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmSubject.resx">
+      <DependentUpon>FrmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\ClassService\service.wsdl" />
+    <None Include="Connected Services\ClassService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClassService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClassService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClassService\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClassService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseService\service.wsdl" />
+    <None Include="Connected Services\CourseService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseService\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CourseService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FacutlyService\service.wsdl" />
+    <None Include="Connected Services\FacutlyService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FacutlyService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FacutlyService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FacutlyService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OpenClassService\service.wsdl" />
+    <None Include="Connected Services\OpenClassService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OpenClassService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OpenClassService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OpenClassService\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OpenClassService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ScoreService\service.wsdl" />
+    <None Include="Connected Services\ScoreService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ScoreService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ScoreService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ScoreService\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ScoreService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceStudent\service.wsdl" />
+    <None Include="Connected Services\ServiceStudent\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceStudent\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceStudent\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceStudent\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceStudent\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubjectService\service.wsdl" />
+    <None Include="Connected Services\SubjectService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubjectService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubjectService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubjectService\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubjectService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\service.wsdl" />
+    <None Include="Connected Services\UserService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\StudentService.Model.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\StudentService.Request.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UserService\StudentService.Response.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\StudentService.Model.Class.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.ClassViewModel.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.Course.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.CurrentUser.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.Facutly.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.IdAndNameModel.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.InsertStudentScoreModel.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.OpenClassModel.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.Profiles.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.ProfilesStudent.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.ScoreStudentViewModel.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.ScoreViewModelByStudent.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.Student.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.StudentInsertScoreByLecturer.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.Subject.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.TopStudentVm.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.User.datasource" />
+    <None Include="Properties\DataSources\StudentService.Model.UserViewModel.datasource" />
+    <None Include="Properties\DataSources\StudentService.Request.OpenClassRequest.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ClassService\" />
+    <WCFMetadataStorage Include="Connected Services\CourseService\" />
+    <WCFMetadataStorage Include="Connected Services\FacutlyService\" />
+    <WCFMetadataStorage Include="Connected Services\OpenClassService\" />
+    <WCFMetadataStorage Include="Connected Services\ScoreService\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceStudent\" />
+    <WCFMetadataStorage Include="Connected Services\SubjectService\" />
+    <WCFMetadataStorage Include="Connected Services\UserService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceStudent\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceStudent\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceStudent\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentService\StudentService.csproj">
+      <Project>{B7C89117-FF65-4399-ABD1-3A3292BDAA07}</Project>
+      <Name>StudentService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\UserService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-male-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CourseService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FacutlyService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FacutlyService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\FacutlyService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClassService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SubjectService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SubjectService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SubjectService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ScoreService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ScoreService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ScoreService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OpenClassService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OpenClassService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\OpenClassService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

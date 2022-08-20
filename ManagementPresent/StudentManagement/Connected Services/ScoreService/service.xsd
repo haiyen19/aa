@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Request" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" />
+  <xs:element name="StudentsInsertScore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q1:SubjectAndClassIdRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentsInsertScoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="StudentsInsertScoreResult" nillable="true" type="q2:ResponseServiceOfArrayOfInsertStudentScoreModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TopStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q3:TopStudentRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TopStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="TopStudentResult" nillable="true" type="q4:ResponseServiceOfArrayOfTopStudentVmDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentsScoreView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q5:SubjectAndClassIdRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentsScoreViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="StudentsScoreViewResult" nillable="true" type="q6:ResponseServiceOfArrayOfScoreStudentViewModelDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScoreAdmin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q7:ScoreStudentRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScoreAdminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SaveScoreAdminResult" nillable="true" type="q8:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScoreByLecture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q9:SaveScoreByLectureRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScoreByLectureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="SaveScoreByLectureResult" nillable="true" type="q10:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Delete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="DeleteResult" nillable="true" type="q11:ResponseServiceOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentsInsertScoreByLecture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OpenClassId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StudentsInsertScoreByLectureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="StudentsInsertScoreByLectureResult" nillable="true" type="q12:ResponseServiceOfArrayOfStudentInsertScoreByLecturerDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScoreViewByStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/StudentService.Request" minOccurs="0" name="request" nillable="true" type="q13:StudentViewScoreRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScoreViewByStudentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/StudentService.Response" minOccurs="0" name="ScoreViewByStudentResult" nillable="true" type="q14:ResponseServiceOfArrayOfScoreViewModelByStudentDZYKyK_SB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

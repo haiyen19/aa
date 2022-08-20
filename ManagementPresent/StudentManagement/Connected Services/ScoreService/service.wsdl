@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ScoreService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Request" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Response" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/StudentService.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IScoreService_StudentsInsertScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:StudentsInsertScore" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_StudentsInsertScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StudentsInsertScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_TopStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:TopStudent" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_TopStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TopStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_StudentsScoreView_InputMessage">
+    <wsdl:part name="parameters" element="tns:StudentsScoreView" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_StudentsScoreView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StudentsScoreViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_SaveScoreAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScoreAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_SaveScoreAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScoreAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_SaveScoreByLecture_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScoreByLecture" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_SaveScoreByLecture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveScoreByLectureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_StudentsInsertScoreByLecture_InputMessage">
+    <wsdl:part name="parameters" element="tns:StudentsInsertScoreByLecture" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_StudentsInsertScoreByLecture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StudentsInsertScoreByLectureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_ScoreViewByStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScoreViewByStudent" />
+  </wsdl:message>
+  <wsdl:message name="IScoreService_ScoreViewByStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScoreViewByStudentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IScoreService">
+    <wsdl:operation name="StudentsInsertScore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/StudentsInsertScore" message="tns:IScoreService_StudentsInsertScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/StudentsInsertScoreResponse" message="tns:IScoreService_StudentsInsertScore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TopStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/TopStudent" message="tns:IScoreService_TopStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/TopStudentResponse" message="tns:IScoreService_TopStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StudentsScoreView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/StudentsScoreView" message="tns:IScoreService_StudentsScoreView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/StudentsScoreViewResponse" message="tns:IScoreService_StudentsScoreView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveScoreAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/SaveScoreAdmin" message="tns:IScoreService_SaveScoreAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/SaveScoreAdminResponse" message="tns:IScoreService_SaveScoreAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveScoreByLecture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/SaveScoreByLecture" message="tns:IScoreService_SaveScoreByLecture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/SaveScoreByLectureResponse" message="tns:IScoreService_SaveScoreByLecture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/Delete" message="tns:IScoreService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/DeleteResponse" message="tns:IScoreService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StudentsInsertScoreByLecture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/StudentsInsertScoreByLecture" message="tns:IScoreService_StudentsInsertScoreByLecture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/StudentsInsertScoreByLectureResponse" message="tns:IScoreService_StudentsInsertScoreByLecture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScoreViewByStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IScoreService/ScoreViewByStudent" message="tns:IScoreService_ScoreViewByStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IScoreService/ScoreViewByStudentResponse" message="tns:IScoreService_ScoreViewByStudent_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IScoreService" type="tns:IScoreService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StudentsInsertScore">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/StudentsInsertScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopStudent">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/TopStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StudentsScoreView">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/StudentsScoreView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveScoreAdmin">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/SaveScoreAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveScoreByLecture">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/SaveScoreByLecture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StudentsInsertScoreByLecture">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/StudentsInsertScoreByLecture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScoreViewByStudent">
+      <soap:operation soapAction="http://tempuri.org/IScoreService/ScoreViewByStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ScoreService">
+    <wsdl:port name="BasicHttpBinding_IScoreService" binding="tns:BasicHttpBinding_IScoreService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/StudentService.Interface/ScoreService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

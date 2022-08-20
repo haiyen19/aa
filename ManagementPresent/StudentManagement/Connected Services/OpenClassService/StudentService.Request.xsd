@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StudentService.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StudentService.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OpenClassRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FacultyId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LecturerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxStudent" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SubjectId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpenClassRequest" nillable="true" type="tns:OpenClassRequest" />
+  <xs:complexType name="RegistOpenClassRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdOpenClass" type="xs:int" />
+      <xs:element minOccurs="0" name="IdStudent" type="xs:int" />
+      <xs:element minOccurs="0" name="SemesterId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegistOpenClassRequest" nillable="true" type="tns:RegistOpenClassRequest" />
+</xs:schema>

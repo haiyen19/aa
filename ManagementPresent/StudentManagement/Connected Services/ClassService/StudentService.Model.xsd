@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StudentService.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StudentService.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Class">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourseId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacultyId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Class" nillable="true" type="tns:Class" />
+  <xs:complexType name="ArrayOfClassViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClassViewModel" nillable="true" type="tns:ClassViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClassViewModel" nillable="true" type="tns:ArrayOfClassViewModel" />
+  <xs:complexType name="ClassViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacultyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassViewModel" nillable="true" type="tns:ClassViewModel" />
+  <xs:complexType name="ArrayOfIdAndNameModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IdAndNameModel" nillable="true" type="tns:IdAndNameModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIdAndNameModel" nillable="true" type="tns:ArrayOfIdAndNameModel" />
+  <xs:complexType name="IdAndNameModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IdAndNameModel" nillable="true" type="tns:IdAndNameModel" />
+</xs:schema>

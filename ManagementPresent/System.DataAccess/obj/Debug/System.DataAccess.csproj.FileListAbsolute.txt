@@ -1,0 +1,11 @@
+C:\Users\trant\source\repos\ManagementPresent\System.DataAccess\bin\Debug\System.DataAccess.dll
+C:\Users\trant\source\repos\ManagementPresent\System.DataAccess\bin\Debug\System.DataAccess.pdb
+C:\Users\trant\source\repos\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\trant\source\repos\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.dll
+C:\Users\trant\source\repos\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.pdb
+E:\WCF\ManagementPresent\System.DataAccess\bin\Debug\System.DataAccess.dll
+E:\WCF\ManagementPresent\System.DataAccess\bin\Debug\System.DataAccess.pdb
+E:\WCF\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.csproj.CoreCompileInputs.cache
+E:\WCF\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.dll
+E:\WCF\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.pdb
+E:\WCF\ManagementPresent\System.DataAccess\obj\Debug\System.DataAccess.csprojAssemblyReference.cache
